@@ -11,7 +11,7 @@ const _dirname = path.dirname(_filename);
 export async function runMigrations(){
     const db = getDB();
     const migrationsDir = path.join(_dirname, 'migrations');
-  
+    console.log(migrationsDir)
     const files = fs
         .readdirSync(migrationsDir)
         .filter(f => f.endsWith('.sql'))
