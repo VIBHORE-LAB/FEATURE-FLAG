@@ -23,7 +23,7 @@ export async function runMigrations(){
             'utf-8'
         )
 
-        console.log(`running migrations: ${file}`);
+        console.log(`running migrations for files : ${file}`);
         await db.query(sql)
         console.log(`done: ${file}`)
     }
