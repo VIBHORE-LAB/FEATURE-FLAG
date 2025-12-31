@@ -16,7 +16,7 @@ export async function runMigrations(){
         .readdirSync(migrationsDir)
         .filter(f => f.endsWith('.sql'))
         .sort();
-
+        
     for (const file of files) {
         const sql = fs.readFileSync(
             path.join(migrationsDir, file),
