@@ -11,11 +11,11 @@ const _dirname = path.dirname(_filename);
 export async function runMigrations(){
     const db = getDB();
     const migrationsDir = path.join(_dirname, 'migrations');
-
+  
     const files = fs
         .readdirSync(migrationsDir)
         .filter(f => f.endsWith('.sql'))
-        .sort();
+        .sort();     
         
     for (const file of files) {
         const sql = fs.readFileSync(
